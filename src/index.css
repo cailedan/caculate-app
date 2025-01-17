@@ -11,3 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.caculator {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4,6rem);
+  /* grid布局，四个一行 */
+  grid-template-rows: minmax(6rem , auto) repeat(5 , 4rem);
+  /* 第一行最小值6rem，剩下五行4rem */
+  gap: 1px;
+  background-color: #faf9f800;
+  width: calc(24rem + 20px);
+  margin: 0  auto;
+  /* 居中 */
+  border: 2px solid black;
+  place-content: space-evenly;
+  /* 元素在grid布局内均匀分布 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.output {
+  box-sizing: border-box;
+  grid-column: 1 / span 4; 
+  /* 从第一条线合并四格 */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  /* 横向自动填充空间，然后右对齐 */
+  padding: 10px;
+  justify-content: space-around;
+  
+  word-wrap: break-word;
+  word-break: break-all;
+  /* 将溢出的单词折叠 */
+}
+
+.last-output {
+
+}
+
+.current-output {
+  font-size: 3rem;
+}
+.button-equal {
+  grid-column: 3 / span 2;
+  
+}
+
+.button-ac {
+  grid-column: 1 /span 2;
+}
+.caculator > button {
+  background-color: rgba(250, 250, 249, 0.75);
+  border-radius: 5px;
+ 
+}
+.caculator > button:nth-child(19) {
+  background-color: rgba(0, 170, 255, 0.749);
+}
+.caculator > button:nth-child(19):hover {
+  background-color: rgb(0, 166, 255);
+}
+
+.caculator > button:hover {
+  background-color: #b5b5b540;
+}
