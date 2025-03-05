@@ -6,7 +6,7 @@ class Home extends Component {
     render() {
         return (
             <Base>
-                首页
+                首页1
             </Base>
         );
     }
